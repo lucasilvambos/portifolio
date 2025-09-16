@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-lucas-ambos",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal com painel administrativo",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": ["portfolio", "frontend", "javascript", "html", "css"],
+  "author": "Lucas Ambos",
+  "license": "MIT"
+}

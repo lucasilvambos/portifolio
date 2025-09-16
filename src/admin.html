@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Lucas Ambos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Login Form -->
+        <div id="login-form" class="login-form">
+            <div class="login-card">
+                <h2>Acesso Administrativo</h2>
+                <form id="admin-login">
+                    <div class="form-group">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                <div id="login-error" class="error-message" style="display: none;">
+                    Senha incorreta!
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="admin-panel" class="admin-panel" style="display: none;">
+            <div class="admin-header">
+                <h1>Painel Administrativo</h1>
+                <div class="admin-actions">
+                    <button id="save-changes" class="btn btn-primary">Salvar Alterações</button>
+                    <button id="logout" class="btn btn-secondary">Sair</button>
+                    <a href="index.html" class="btn btn-outline">Ver Site</a>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <!-- Seção Bio -->
+                <div class="admin-section">
+                    <h3>Informações Pessoais</h3>
+                    <div class="form-group">
+                        <label for="edit-name">Nome:</label>
+                        <input type="text" id="edit-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-title">Título:</label>
+                        <input type="text" id="edit-title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-description">Descrição:</label>
+                        <textarea id="edit-description" class="form-control" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- Seção Contato -->
+                <div class="admin-section">
+                    <h3>Informações de Contato</h3>
+                    <div class="form-group">
+                        <label for="edit-email">Email:</label>
+                        <input type="email" id="edit-email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-whatsapp">WhatsApp:</label>
+                        <input type="text" id="edit-whatsapp" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-github">GitHub:</label>
+                        <input type="url" id="edit-github" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-linkedin">LinkedIn:</label>
+                        <input type="url" id="edit-linkedin" class="form-control">
+                    </div>
+                </div>
+
+                <!-- Seção Projetos -->
+                <div class="admin-section">
+                    <h3>Projetos</h3>
+                    <div id="projects-editor">
+                        <!-- Projetos editáveis serão inseridos aqui -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="save-success" class="success-message" style="display: none;">
+                Alterações salvas com sucesso!
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
